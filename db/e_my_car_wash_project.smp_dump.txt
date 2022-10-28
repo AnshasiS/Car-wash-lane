@@ -1,0 +1,19 @@
+
+State Machine - |e_my_car_wash_project|e_car_wash_FSM:I_car_wash_FSM|car_wash_state
+Name car_wash_state~7 car_wash_state~6 car_wash_state~5 car_wash_state~4 
+car_wash_state.S_IDLE 0 0 0 0 
+car_wash_state.S_PRICE 0 0 0 1 
+car_wash_state.S_WASH_START 0 0 1 0 
+car_wash_state.S_WASH_UNDERCARR_START 0 0 1 1 
+car_wash_state.S_WASH_AXIS_BACK 0 1 0 0 
+car_wash_state.S_RIM_CLEANING 0 1 0 1 
+car_wash_state.S_SHINE_START 0 1 1 0 
+car_wash_state.S_SHINE_AXIS_BACK 0 1 1 1 
+car_wash_state.S_WAXING_START 1 0 0 0 
+car_wash_state.S_WAXING_AXIS_BACK 1 0 0 1 
+car_wash_state.S_DRY_START 1 0 1 0 
+car_wash_state.S_DRY_AXIS_BACK 1 0 1 1 
+car_wash_state.S_POLISH_START 1 1 0 0 
+car_wash_state.S_POLISH_AXIS_BACK 1 1 0 1 
+car_wash_state.S_HOME 1 1 1 0 
+car_wash_state.S_DONE 1 1 1 1 

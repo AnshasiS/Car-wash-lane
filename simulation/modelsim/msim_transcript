@@ -1,0 +1,1052 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do e_my_car_wash_project_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/_PStA_CarWash/e_display_and_LED_handler.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:24 on Jul 30,2021
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_display_and_LED_handler.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_display_and_LED_handler
+# -- Compiling architecture a_display_and_LED_handler of e_display_and_LED_handler
+# End time: 17:30:24 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/_PStA_CarWash/e_RAM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:24 on Jul 30,2021
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_RAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_RAM
+# -- Compiling architecture a_RAM of e_RAM
+# End time: 17:30:24 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/_PStA_CarWash/e_price_calculation.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:24 on Jul 30,2021
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_price_calculation.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_price_calculation
+# -- Compiling architecture a_price_calculation of e_price_calculation
+# End time: 17:30:24 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/_PStA_CarWash/e_option_selection.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:24 on Jul 30,2021
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_option_selection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_option_selection
+# -- Compiling architecture a_option_selection of e_option_selection
+# End time: 17:30:24 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/_PStA_CarWash/e_my_car_wash_project.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:26 on Jul 30,2021
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_my_car_wash_project.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_my_car_wash_project
+# -- Compiling architecture a_my_car_wash_project of e_my_car_wash_project
+# End time: 17:30:26 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/_PStA_CarWash/e_modulo_counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:26 on Jul 30,2021
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_modulo_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_modulo_counter
+# -- Compiling architecture a_modulo_counter of e_modulo_counter
+# End time: 17:30:26 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/_PStA_CarWash/e_convert_to_7seg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:26 on Jul 30,2021
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_convert_to_7seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_convert_to_7seg
+# -- Compiling architecture a_convert_to_7seg of e_convert_to_7seg
+# End time: 17:30:26 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/_PStA_CarWash/e_car_wash_FSM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:26 on Jul 30,2021
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_car_wash_FSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_car_wash_FSM
+# -- Compiling architecture a_car_wash_FSM of e_car_wash_FSM
+# End time: 17:30:27 on Jul 30,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/_PStA_CarWash/e_axis.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:27 on Jul 30,2021
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_axis.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_axis
+# -- Compiling architecture a_axis of e_axis
+# End time: 17:30:27 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do run.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:33 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_modulo_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_modulo_counter
+# -- Compiling architecture a_modulo_counter of e_modulo_counter
+# End time: 17:30:33 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:33 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_RAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_RAM
+# -- Compiling architecture a_RAM of e_RAM
+# End time: 17:30:33 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:33 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_price_calculation.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_price_calculation
+# -- Compiling architecture a_price_calculation of e_price_calculation
+# End time: 17:30:33 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:33 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_option_selection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_option_selection
+# -- Compiling architecture a_option_selection of e_option_selection
+# End time: 17:30:33 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:33 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_convert_to_7seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_convert_to_7seg
+# -- Compiling architecture a_convert_to_7seg of e_convert_to_7seg
+# End time: 17:30:34 on Jul 30,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_display_and_LED_handler.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_display_and_LED_handler
+# -- Compiling architecture a_display_and_LED_handler of e_display_and_LED_handler
+# End time: 17:30:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_axis.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_axis
+# -- Compiling architecture a_axis of e_axis
+# End time: 17:30:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_car_wash_FSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_car_wash_FSM
+# -- Compiling architecture a_car_wash_FSM of e_car_wash_FSM
+# End time: 17:30:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_my_car_wash_project.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_my_car_wash_project
+# -- Compiling architecture a_my_car_wash_project of e_my_car_wash_project
+# End time: 17:30:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:30:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity e_my_car_wash_project_vhd_tst
+# -- Compiling architecture e_my_car_wash_project_arch of e_my_car_wash_project_vhd_tst
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(85): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(86): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(259): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 17:30:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# vsim work.e_my_car_wash_project_vhd_tst 
+# Start time: 17:30:34 on Jul 30,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.e_my_car_wash_project_vhd_tst(e_my_car_wash_project_arch)
+# Loading work.e_my_car_wash_project(a_my_car_wash_project)
+# Loading work.e_axis(a_axis)
+# Loading work.e_modulo_counter(a_modulo_counter)
+# Loading work.e_car_wash_fsm(a_car_wash_fsm)
+# Loading work.e_option_selection(a_option_selection)
+# Loading work.e_price_calculation(a_price_calculation)
+# Loading work.e_display_and_led_handler(a_display_and_led_handler)
+# Loading work.e_convert_to_7seg(a_convert_to_7seg)
+# Loading work.e_ram(a_ram)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst/i1/I_7Seg_LED_handler
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_car_wash_FSM/I_my_slow_enable
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_x_axis/I_my_slow_enable_1mm
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_x_axis/I_my_slow_enable_1ms
+# ** Note: P_release_emerg_stop_button
+#    Time: 50 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_change_option_selection_binary
+#    Time: 50 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_ack_button
+#    Time: 110 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_pay_button
+#    Time: 190 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_reset
+#    Time: 50230 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Failure: --- END OF SIMULATION ---
+#    Time: 100270 ns  Iteration: 0  Process: /e_my_car_wash_project_vhd_tst/p_stimulus File: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht
+# Break in Process p_stimulus at C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht line 729
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# WARNING: No extended dataflow license exists
+do run.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:33 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_modulo_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_modulo_counter
+# -- Compiling architecture a_modulo_counter of e_modulo_counter
+# End time: 17:56:33 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:33 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_RAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_RAM
+# -- Compiling architecture a_RAM of e_RAM
+# End time: 17:56:33 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:33 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_price_calculation.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_price_calculation
+# -- Compiling architecture a_price_calculation of e_price_calculation
+# End time: 17:56:33 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_option_selection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_option_selection
+# -- Compiling architecture a_option_selection of e_option_selection
+# End time: 17:56:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_convert_to_7seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_convert_to_7seg
+# -- Compiling architecture a_convert_to_7seg of e_convert_to_7seg
+# End time: 17:56:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_display_and_LED_handler.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_display_and_LED_handler
+# -- Compiling architecture a_display_and_LED_handler of e_display_and_LED_handler
+# End time: 17:56:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_axis.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_axis
+# -- Compiling architecture a_axis of e_axis
+# End time: 17:56:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_car_wash_FSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_car_wash_FSM
+# -- Compiling architecture a_car_wash_FSM of e_car_wash_FSM
+# End time: 17:56:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_my_car_wash_project.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_my_car_wash_project
+# -- Compiling architecture a_my_car_wash_project of e_my_car_wash_project
+# End time: 17:56:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity e_my_car_wash_project_vhd_tst
+# -- Compiling architecture e_my_car_wash_project_arch of e_my_car_wash_project_vhd_tst
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(85): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(86): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(259): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 17:56:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# End time: 17:56:39 on Jul 30,2021, Elapsed time: 0:26:05
+# Errors: 1, Warnings: 8
+# vsim work.e_my_car_wash_project_vhd_tst 
+# Start time: 17:56:40 on Jul 30,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.e_my_car_wash_project_vhd_tst(e_my_car_wash_project_arch)
+# Loading work.e_my_car_wash_project(a_my_car_wash_project)
+# Loading work.e_axis(a_axis)
+# Loading work.e_modulo_counter(a_modulo_counter)
+# Loading work.e_car_wash_fsm(a_car_wash_fsm)
+# Loading work.e_option_selection(a_option_selection)
+# Loading work.e_price_calculation(a_price_calculation)
+# Loading work.e_display_and_led_handler(a_display_and_led_handler)
+# Loading work.e_convert_to_7seg(a_convert_to_7seg)
+# Loading work.e_ram(a_ram)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst/i1/I_7Seg_LED_handler
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_car_wash_FSM/I_my_slow_enable
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_x_axis/I_my_slow_enable_1mm
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_x_axis/I_my_slow_enable_1ms
+# ** Note: P_release_emerg_stop_button
+#    Time: 50 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_change_option_selection_binary
+#    Time: 50 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_ack_button
+#    Time: 110 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_pay_button
+#    Time: 190 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_reset
+#    Time: 50230 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Failure: --- END OF SIMULATION ---
+#    Time: 100270 ns  Iteration: 0  Process: /e_my_car_wash_project_vhd_tst/p_stimulus File: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht
+# Break in Process p_stimulus at C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht line 729
+do run.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:59:42 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_modulo_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_modulo_counter
+# -- Compiling architecture a_modulo_counter of e_modulo_counter
+# End time: 17:59:42 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:59:42 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_RAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_RAM
+# -- Compiling architecture a_RAM of e_RAM
+# End time: 17:59:42 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:59:42 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_price_calculation.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_price_calculation
+# -- Compiling architecture a_price_calculation of e_price_calculation
+# End time: 17:59:42 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:59:42 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_option_selection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_option_selection
+# -- Compiling architecture a_option_selection of e_option_selection
+# End time: 17:59:42 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:59:42 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_convert_to_7seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_convert_to_7seg
+# -- Compiling architecture a_convert_to_7seg of e_convert_to_7seg
+# End time: 17:59:42 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:59:42 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_display_and_LED_handler.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_display_and_LED_handler
+# -- Compiling architecture a_display_and_LED_handler of e_display_and_LED_handler
+# End time: 17:59:42 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:59:42 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_axis.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_axis
+# -- Compiling architecture a_axis of e_axis
+# End time: 17:59:42 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:59:42 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_car_wash_FSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_car_wash_FSM
+# -- Compiling architecture a_car_wash_FSM of e_car_wash_FSM
+# End time: 17:59:43 on Jul 30,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:59:43 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_my_car_wash_project.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_my_car_wash_project
+# -- Compiling architecture a_my_car_wash_project of e_my_car_wash_project
+# End time: 17:59:43 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:59:43 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity e_my_car_wash_project_vhd_tst
+# -- Compiling architecture e_my_car_wash_project_arch of e_my_car_wash_project_vhd_tst
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(85): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(86): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(259): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 17:59:43 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# End time: 17:59:57 on Jul 30,2021, Elapsed time: 0:03:17
+# Errors: 0, Warnings: 7
+# vsim work.e_my_car_wash_project_vhd_tst 
+# Start time: 17:59:57 on Jul 30,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.e_my_car_wash_project_vhd_tst(e_my_car_wash_project_arch)
+# Loading work.e_my_car_wash_project(a_my_car_wash_project)
+# Loading work.e_axis(a_axis)
+# Loading work.e_modulo_counter(a_modulo_counter)
+# Loading work.e_car_wash_fsm(a_car_wash_fsm)
+# Loading work.e_option_selection(a_option_selection)
+# Loading work.e_price_calculation(a_price_calculation)
+# Loading work.e_display_and_led_handler(a_display_and_led_handler)
+# Loading work.e_convert_to_7seg(a_convert_to_7seg)
+# Loading work.e_ram(a_ram)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst/i1/I_7Seg_LED_handler
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_car_wash_FSM/I_my_slow_enable
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_x_axis/I_my_slow_enable_1mm
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_x_axis/I_my_slow_enable_1ms
+# ** Note: P_release_emerg_stop_button
+#    Time: 50 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_change_option_selection_binary
+#    Time: 50 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_ack_button
+#    Time: 110 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_pay_button
+#    Time: 190 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_reset
+#    Time: 50230 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_ack_button
+#    Time: 50470 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_pay_button
+#    Time: 50550 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Failure: --- END OF SIMULATION ---
+#    Time: 250590 ns  Iteration: 0  Process: /e_my_car_wash_project_vhd_tst/p_stimulus File: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht
+# Break in Process p_stimulus at C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht line 733
+do run.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:11 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_modulo_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_modulo_counter
+# -- Compiling architecture a_modulo_counter of e_modulo_counter
+# End time: 18:02:11 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:11 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_RAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_RAM
+# -- Compiling architecture a_RAM of e_RAM
+# End time: 18:02:11 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:11 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_price_calculation.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_price_calculation
+# -- Compiling architecture a_price_calculation of e_price_calculation
+# End time: 18:02:11 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:11 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_option_selection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_option_selection
+# -- Compiling architecture a_option_selection of e_option_selection
+# End time: 18:02:11 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:11 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_convert_to_7seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_convert_to_7seg
+# -- Compiling architecture a_convert_to_7seg of e_convert_to_7seg
+# End time: 18:02:11 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:11 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_display_and_LED_handler.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_display_and_LED_handler
+# -- Compiling architecture a_display_and_LED_handler of e_display_and_LED_handler
+# End time: 18:02:11 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:11 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_axis.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_axis
+# -- Compiling architecture a_axis of e_axis
+# End time: 18:02:11 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:11 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_car_wash_FSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_car_wash_FSM
+# -- Compiling architecture a_car_wash_FSM of e_car_wash_FSM
+# End time: 18:02:11 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:11 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_my_car_wash_project.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_my_car_wash_project
+# -- Compiling architecture a_my_car_wash_project of e_my_car_wash_project
+# End time: 18:02:12 on Jul 30,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:12 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity e_my_car_wash_project_vhd_tst
+# -- Compiling architecture e_my_car_wash_project_arch of e_my_car_wash_project_vhd_tst
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(85): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(86): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(259): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 18:02:12 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# End time: 18:02:22 on Jul 30,2021, Elapsed time: 0:02:25
+# Errors: 0, Warnings: 7
+# vsim work.e_my_car_wash_project_vhd_tst 
+# Start time: 18:02:22 on Jul 30,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.e_my_car_wash_project_vhd_tst(e_my_car_wash_project_arch)
+# Loading work.e_my_car_wash_project(a_my_car_wash_project)
+# Loading work.e_axis(a_axis)
+# Loading work.e_modulo_counter(a_modulo_counter)
+# Loading work.e_car_wash_fsm(a_car_wash_fsm)
+# Loading work.e_option_selection(a_option_selection)
+# Loading work.e_price_calculation(a_price_calculation)
+# Loading work.e_display_and_led_handler(a_display_and_led_handler)
+# Loading work.e_convert_to_7seg(a_convert_to_7seg)
+# Loading work.e_ram(a_ram)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst/i1/I_7Seg_LED_handler
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_car_wash_FSM/I_my_slow_enable
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_x_axis/I_my_slow_enable_1mm
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_x_axis/I_my_slow_enable_1ms
+# ** Note: P_release_emerg_stop_button
+#    Time: 50 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_change_option_selection_binary
+#    Time: 50 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_ack_button
+#    Time: 110 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_pay_button
+#    Time: 190 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_reset
+#    Time: 50230 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_activate_home_request_switch
+#    Time: 50470 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_ack_button
+#    Time: 100490 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_pay_button
+#    Time: 100570 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Failure: --- END OF SIMULATION ---
+#    Time: 300610 ns  Iteration: 0  Process: /e_my_car_wash_project_vhd_tst/p_stimulus File: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht
+# Break in Process p_stimulus at C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht line 735
+do run.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:45:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_modulo_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_modulo_counter
+# -- Compiling architecture a_modulo_counter of e_modulo_counter
+# End time: 20:45:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:45:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_RAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_RAM
+# -- Compiling architecture a_RAM of e_RAM
+# End time: 20:45:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:45:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_price_calculation.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_price_calculation
+# -- Compiling architecture a_price_calculation of e_price_calculation
+# End time: 20:45:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:45:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_option_selection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_option_selection
+# -- Compiling architecture a_option_selection of e_option_selection
+# End time: 20:45:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:45:34 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_convert_to_7seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_convert_to_7seg
+# -- Compiling architecture a_convert_to_7seg of e_convert_to_7seg
+# End time: 20:45:34 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:45:35 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_display_and_LED_handler.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_display_and_LED_handler
+# -- Compiling architecture a_display_and_LED_handler of e_display_and_LED_handler
+# End time: 20:45:35 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:45:35 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_axis.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_axis
+# -- Compiling architecture a_axis of e_axis
+# End time: 20:45:35 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:45:35 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_car_wash_FSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_car_wash_FSM
+# -- Compiling architecture a_car_wash_FSM of e_car_wash_FSM
+# End time: 20:45:35 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:45:35 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_my_car_wash_project.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_my_car_wash_project
+# -- Compiling architecture a_my_car_wash_project of e_my_car_wash_project
+# End time: 20:45:35 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:45:35 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity e_my_car_wash_project_vhd_tst
+# -- Compiling architecture e_my_car_wash_project_arch of e_my_car_wash_project_vhd_tst
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(85): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(86): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(259): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 20:45:35 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# End time: 20:45:41 on Jul 30,2021, Elapsed time: 2:43:19
+# Errors: 0, Warnings: 7
+# vsim work.e_my_car_wash_project_vhd_tst 
+# Start time: 20:45:41 on Jul 30,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.e_my_car_wash_project_vhd_tst(e_my_car_wash_project_arch)
+# Loading work.e_my_car_wash_project(a_my_car_wash_project)
+# Loading work.e_axis(a_axis)
+# Loading work.e_modulo_counter(a_modulo_counter)
+# Loading work.e_car_wash_fsm(a_car_wash_fsm)
+# Loading work.e_option_selection(a_option_selection)
+# Loading work.e_price_calculation(a_price_calculation)
+# Loading work.e_display_and_led_handler(a_display_and_led_handler)
+# Loading work.e_convert_to_7seg(a_convert_to_7seg)
+# Loading work.e_ram(a_ram)
+# ** Failure: --- END OF SIMULATION ---
+#    Time: 0 ps  Iteration: 0  Process: /e_my_car_wash_project_vhd_tst/p_stimulus File: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht
+# Break in Process p_stimulus at C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht line 718
+do run.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:46:12 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_modulo_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_modulo_counter
+# -- Compiling architecture a_modulo_counter of e_modulo_counter
+# End time: 20:46:12 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:46:12 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_RAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_RAM
+# -- Compiling architecture a_RAM of e_RAM
+# End time: 20:46:12 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:46:12 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_price_calculation.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_price_calculation
+# -- Compiling architecture a_price_calculation of e_price_calculation
+# End time: 20:46:13 on Jul 30,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:46:13 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_option_selection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_option_selection
+# -- Compiling architecture a_option_selection of e_option_selection
+# End time: 20:46:13 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:46:13 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_convert_to_7seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_convert_to_7seg
+# -- Compiling architecture a_convert_to_7seg of e_convert_to_7seg
+# End time: 20:46:13 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:46:13 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_display_and_LED_handler.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_display_and_LED_handler
+# -- Compiling architecture a_display_and_LED_handler of e_display_and_LED_handler
+# End time: 20:46:13 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:46:13 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_axis.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_axis
+# -- Compiling architecture a_axis of e_axis
+# End time: 20:46:13 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:46:13 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_car_wash_FSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity e_car_wash_FSM
+# -- Compiling architecture a_car_wash_FSM of e_car_wash_FSM
+# End time: 20:46:13 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:46:13 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/e_my_car_wash_project.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e_my_car_wash_project
+# -- Compiling architecture a_my_car_wash_project of e_my_car_wash_project
+# End time: 20:46:13 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:46:13 on Jul 30,2021
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity e_my_car_wash_project_vhd_tst
+# -- Compiling architecture e_my_car_wash_project_arch of e_my_car_wash_project_vhd_tst
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(85): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht(86): (vcom-1236) Shared variables must be of a protected type.
+# End time: 20:46:13 on Jul 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 20:46:19 on Jul 30,2021, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 2
+# vsim work.e_my_car_wash_project_vhd_tst 
+# Start time: 20:46:19 on Jul 30,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.e_my_car_wash_project_vhd_tst(e_my_car_wash_project_arch)
+# Loading work.e_my_car_wash_project(a_my_car_wash_project)
+# Loading work.e_axis(a_axis)
+# Loading work.e_modulo_counter(a_modulo_counter)
+# Loading work.e_car_wash_fsm(a_car_wash_fsm)
+# Loading work.e_option_selection(a_option_selection)
+# Loading work.e_price_calculation(a_price_calculation)
+# Loading work.e_display_and_led_handler(a_display_and_led_handler)
+# Loading work.e_convert_to_7seg(a_convert_to_7seg)
+# Loading work.e_ram(a_ram)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst/i1/I_7Seg_LED_handler
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_car_wash_FSM/I_my_slow_enable
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_x_axis/I_my_slow_enable_1mm
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /e_my_car_wash_project_vhd_tst/i1/I_x_axis/I_my_slow_enable_1ms
+# ** Note: P_release_emerg_stop_button
+#    Time: 50 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_activate_rim_cleaning
+#    Time: 110 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_activate_undercarriage_wash
+#    Time: 110 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_activate_waxing
+#    Time: 110 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_activate_polishing
+#    Time: 110 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_activate_shine_wash
+#    Time: 110 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_ack_button
+#    Time: 230 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_pay_button
+#    Time: 370 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_emerg_stop_button
+#    Time: 100410 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_release_emerg_stop_button
+#    Time: 100630 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_activate_home_request_switch
+#    Time: 100850 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_deactivate_home_request_switch
+#    Time: 101070 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_activate_rim_cleaning
+#    Time: 105090 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_deactivate_undercarriage_wash
+#    Time: 105090 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_activate_waxing
+#    Time: 105090 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_deactivate_polishing
+#    Time: 105090 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_activate_shine_wash
+#    Time: 105090 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_ack_button
+#    Time: 105210 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Note: P_press_pay_button
+#    Time: 105350 ns  Iteration: 0  Instance: /e_my_car_wash_project_vhd_tst
+# ** Failure: --- END OF SIMULATION ---
+#    Time: 205390 ns  Iteration: 0  Process: /e_my_car_wash_project_vhd_tst/p_stimulus File: C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht
+# Break in Process p_stimulus at C:/intelFPGA_lite/18.1/_PStA_CarWash/simulation/modelsim/e_my_car_wash_project.vht line 718
+# End time: 20:47:40 on Jul 30,2021, Elapsed time: 0:01:21
+# Errors: 0, Warnings: 4

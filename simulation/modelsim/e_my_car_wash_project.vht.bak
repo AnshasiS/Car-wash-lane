@@ -1,0 +1,411 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+-- ***************************************************************************
+-- This file contains a Vhdl test bench template that is freely editable to   
+-- suit user's needs .Comments are provided in each section to help the user  
+-- fill out necessary details.                                                
+-- ***************************************************************************
+-- Generated on "07/22/2021 10:41:43"
+                                                            
+-- Vhdl Test Bench template for design  :  e_my_car_wash_project
+-- 
+-- Simulation tool : ModelSim-Altera (VHDL)
+-- 
+
+LIBRARY ieee;                                               
+USE ieee.std_logic_1164.all; 
+use ieee.std_logic_textio.all;
+
+library std;
+use std.textio.all;                               
+
+ENTITY e_my_car_wash_project_vhd_tst IS
+END e_my_car_wash_project_vhd_tst;
+
+ARCHITECTURE e_my_car_wash_project_arch OF e_my_car_wash_project_vhd_tst IS
+-- constants                                                 
+-- signals                                                   
+	SIGNAL CLOCK_50 : 	STD_LOGIC := '0';
+	SIGNAL KEY : 		STD_LOGIC_VECTOR(3 DOWNTO 0) := "1111";
+	SIGNAL SW:			std_logic_vector(9 downto 0) := "0000000000";
+	SIGNAL LEDR : 		STD_LOGIC_VECTOR(9 DOWNTO 0);
+	
+COMPONENT e_my_car_wash_project
+		generic( n: natural := 8; k: integer := 150);
+	PORT (
+		CLOCK_50 : 	IN STD_LOGIC;
+		KEY : 		IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		SW:			in std_logic_vector(9 downto 0);
+		LEDR : 		OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+	);
+END COMPONENT;
+
+BEGIN
+	i1 : e_my_car_wash_project
+	GENERIC MAP( n => 8, k => 150)
+	PORT MAP (
+-- list connections between master ports and signals
+	CLOCK_50 => CLOCK_50,
+	KEY => KEY,
+	SW => SW,
+	LEDR => LEDR
+	);
+	
+	CLOCK_50 <= not CLOCK_50 after 10 ns;
+
+	
+	p_stimulus: process
+	
+	procedure P_sync_app(constant c_loop: integer) is
+		variable v_count: integer := 0;
+	begin
+		loop_cnt: while v_count <= c_loop loop
+			wait until rising_edge(CLOCK_50);
+				v_count := v_count + 1;
+		end loop loop_cnt;
+	end procedure P_sync_app;
+
+	
+	procedure P_press_reset is
+	begin
+		report "P_press_reset" severity warning;
+		KEY(0)	<= '0';
+		wait for 30 ns;
+		KEY(0)	<= '1';
+	end procedure P_press_reset;
+
+	procedure P_press_ack_button is
+	begin
+		report "P_press_ack_button" severity warning;
+		KEY(1)	<= '0';
+		wait for 30 ns;
+		KEY(1)	<= '1';		
+	end procedure P_press_ack_button;
+
+	procedure P_press_pay_button is
+	begin
+		report "P_press_pay_button" severity warning;
+		KEY(2)	<= '0';
+		wait for 30 ns;
+		KEY(2)	<= '1';		
+	end procedure P_press_pay_button;
+
+	procedure P_press_back_button is
+	begin
+		report "P_press_back_button" severity warning;
+		KEY(3)	<= '0';
+		wait for 30 ns;
+		KEY(3)	<= '1';		
+	end procedure P_press_back_button;
+
+	
+	
+	procedure P_press_emerg_stop_button is
+	begin
+		report "P_press_emerg_stop_button" severity warning;
+		SW(9)	<= '0';	
+	end procedure P_press_emerg_stop_button;
+	
+	procedure P_release_emerg_stop_button is
+	begin
+		report "P_release_emerg_stop_button" severity warning;
+		SW(9)	<= '1';	
+	end procedure P_release_emerg_stop_button;
+	
+	procedure P_deactivate_home_request_switch is
+	begin
+		report "P_deactivate_home_request_switch" severity warning;
+		SW(8)	<= '0';	
+	end procedure P_deactivate_home_request_switch;
+	
+	procedure P_activate_home_request_switch is
+	begin
+		report "P_activate_home_request_switch" severity warning;
+		SW(8)	<= '1';	
+	end procedure P_activate_home_request_switch;
+	
+	
+	-----------------------------------------------------------------------------------
+	procedure P_deactivate_rim_cleaning is
+	begin
+		report "P_deactivate_rim_cleaning" severity warning;
+		SW(0)	<= '0';	
+	end procedure P_deactivate_rim_cleaning;
+	
+	procedure P_activate_rim_cleaning is
+	begin
+		report "P_activate_rim_cleaning" severity warning;
+		SW(0)	<= '1';	
+	end procedure P_activate_rim_cleaning;
+	
+	
+	procedure P_deactivate_undercarriage_wash is
+	begin
+		report "P_deactivate_undercarriage_wash" severity warning;
+		SW(1)	<= '0';	
+	end procedure P_deactivate_undercarriage_wash;
+	
+	procedure P_activate_undercarriage_wash is
+	begin
+		report "P_activate_undercarriage_wash" severity warning;
+		SW(1)	<= '1';	
+	end procedure P_activate_undercarriage_wash;
+	
+	
+	procedure P_deactivate_waxing is
+	begin
+		report "P_deactivate_waxing" severity warning;
+		SW(2)	<= '0';	
+	end procedure P_deactivate_waxing;
+	
+	procedure P_activate_waxing is
+	begin
+		report "P_activate_waxing" severity warning;
+		SW(2)	<= '1';	
+	end procedure P_activate_waxing;
+	
+	
+	procedure P_deactivate_polishing is
+	begin
+		report "P_deactivate_polishing" severity warning;
+		SW(3)	<= '0';	
+	end procedure P_deactivate_polishing;
+	
+	procedure P_activate_polishing is
+	begin
+		report "P_activate_polishing" severity warning;
+		SW(3)	<= '1';	
+	end procedure P_activate_polishing;
+	
+	
+	procedure P_deactivate_shine_wash is
+	begin
+		report "P_deactivate_shine_wash" severity warning;
+		SW(4)	<= '0';	
+	end procedure P_deactivate_shine_wash;
+	
+	procedure P_activate_shine_wash is
+	begin
+		report "P_activate_shine_wash" severity warning;
+		SW(4)	<= '1';	
+	end procedure P_activate_shine_wash;
+		
+	procedure P_test_all_price_combinations is
+	begin
+		report "P_test_all_price_combinations" severity warning;
+		SW(4 downto 0)	<= "00000";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "00001";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "00010";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "00011";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "00100";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "00101";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "00110";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "00111";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "01000";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "01001";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "01010";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "01011";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "01100";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "01101";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "01110";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "01111";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "10000";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "10001";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "10010";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "10011";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "10100";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "10101";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "10110";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "10111";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "11000";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "11001";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "11010";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "11011";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "11100";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "11101";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "11110";	
+		P_sync_app(1);
+		SW(4 downto 0)	<= "11111";
+	end procedure P_test_all_price_combinations;
+	
+	-----------------------------------------------------------------------------------
+	
+	--sl_reset_n					=>	KEY(0),
+	--sl_start_button				=>	KEY(1),
+	--sl_back_button				=>	KEY(2),
+	--sl_emergency_stop_n			=>	SW(0),
+	begin
+
+--------------Test: start process and interrupt with emergency stop, afterwards driving to home position, then starting process again----------------------------
+--		P_sync_app(2);
+--		P_release_emerg_stop_button;
+--		P_sync_app(2);
+--		P_activate_rim_cleaning;
+--		P_activate_undercarriage_wash;
+--		P_activate_waxing;
+--		P_activate_polishing;
+--		P_activate_shine_wash;
+--		P_sync_app(5);
+--		P_press_ack_button;
+--		P_sync_app(5);
+--		P_press_pay_button;
+--		P_sync_app(5000);
+--		P_press_emerg_stop_button;
+--		P_sync_app(10);
+--		P_release_emerg_stop_button;
+--		P_sync_app(10);
+--		P_activate_home_request_switch;
+--		P_sync_app(10);
+--		P_deactivate_home_request_switch;
+--		P_sync_app(200);
+--		P_activate_rim_cleaning;
+--		P_deactivate_undercarriage_wash;
+--		P_activate_waxing;
+--		P_deactivate_polishing;
+--		P_activate_shine_wash;
+--		P_sync_app(5);
+--		P_press_ack_button;
+--		P_sync_app(5);
+--		P_press_pay_button;
+--		P_sync_app(5000);
+-----------End Test--------------------------------------------------------------------------------------------------------------------------------------------------		
+
+------------Test: acknowledge selected options and try to change options before start, without pressing back button--------------------------------------------------
+		P_sync_app(2);
+		P_release_emerg_stop_button;
+		P_sync_app(2);
+		P_activate_rim_cleaning;
+		P_sync_app(2);
+		P_activate_undercarriage_wash;
+		P_sync_app(2);
+		P_activate_waxing;
+		P_sync_app(2);
+		P_activate_polishing;
+		P_sync_app(2);
+		P_activate_shine_wash;
+		P_sync_app(5);
+		P_press_ack_button;
+		P_sync_app(5);
+		P_deactivate_rim_cleaning;
+		P_sync_app(2);
+		P_deactivate_undercarriage_wash;
+		P_sync_app(2);
+		P_deactivate_waxing;
+		P_sync_app(2);
+		P_deactivate_polishing;
+		P_sync_app(2);
+		P_deactivate_shine_wash;
+		P_sync_app(5);
+		P_press_pay_button;
+		P_sync_app(10000);
+-----------End Test--------------------------------------------------------------------------------------------------------------------------------------------------	
+		
+		--P_press_reset;
+		--P_sync_app(100);
+		--P_set_axis_to_wrk;
+		--P_sync_app(100000);
+		--P_reset_axis_to_wrk;
+		--P_sync_app(100);
+		--P_set_axis_to_wrk;
+		--P_sync_app(10000);
+		--P_reset_axis_to_wrk;
+		--P_sync_app(100);
+		--P_set_axis_to_bas;
+		--P_sync_app(100000);
+		
+--		P_sync_app(10);
+--		P_release_emerg_stop_button;
+--		P_sync_app(2);
+--		
+--		--P_test_all_price_combinations;
+--		P_activate_rim_cleaning;
+--		--P_sync_app(5);
+--		P_activate_undercarriage_wash;
+--		--P_sync_app(5);
+--		P_activate_waxing;
+--		--P_sync_app(5);
+--		P_activate_polishing;
+--		--P_sync_app(5);
+--		P_activate_shine_wash;
+--		P_sync_app(5);
+--		
+--		P_press_ack_button;
+--		P_sync_app(10);
+--		P_press_pay_button;
+----		P_sync_app(10);
+----		P_deactivate_rim_cleaning;
+----		P_sync_app(2);
+----		P_deactivate_undercarriage_wash;
+----		P_sync_app(2);
+----		P_deactivate_waxing;
+----		P_sync_app(2);
+----		P_deactivate_polishing;
+----		P_sync_app(2);
+----		P_deactivate_shine_wash;
+--		P_sync_app(5000);
+--		P_press_emerg_stop_button;
+--		P_sync_app(10);
+--		P_release_emerg_stop_button;
+--		P_sync_app(10);
+--		P_activate_home_request_switch;
+--		P_sync_app(10);
+--		P_deactivate_home_request_switch;
+--		P_sync_app(200);
+--		P_activate_rim_cleaning;
+--		P_activate_undercarriage_wash;
+--		P_activate_waxing;
+--		P_activate_polishing;
+--		P_activate_shine_wash;
+--		P_sync_app(5);
+--		P_press_ack_button;
+--		P_sync_app(5);
+--		P_press_pay_button;
+--		P_sync_app(5000);
+		
+		assert false report "--- END OF SIMULATION ---" severity failure;
+	
+	end process p_stimulus;
+	
+END e_my_car_wash_project_arch;

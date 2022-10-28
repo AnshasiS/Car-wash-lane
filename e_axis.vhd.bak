@@ -1,0 +1,100 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity e_axis is
+	generic( n: natural := 7; wrk: integer := 100);
+	port (	sl_clock, sl_reset_n:	in		std_logic;
+			sl_cmd_to_bas_pos:		in		std_logic;
+			sl_cmd_to_wrk_pos:		in		std_logic;
+			i_speed_s_pro_m:		in		integer range 0 to 99; 	-- min. speed is 99 s/m
+			i_pos:					out		integer range 0 to wrk;
+			sl_axis_moving:			out		std_logic;
+			sl_in_bas_pos:			out		std_logic;
+			sl_in_wrk_pos:			out		std_logic
+	);
+end entity e_axis;
+
+architecture a_axis of e_axis is
+
+-- Declarations:
+
+-- Signal Declarations:
+	signal i_pos_int:				integer range 0 to wrk;
+	signal sl_axis_moving_int:		std_logic;
+	signal sl_in_bas_pos_int:		std_logic := '0';
+	signal sl_in_wrk_pos_int:		std_logic := '0';
+	
+	signal sl_rollover_value_1mm_int:	std_logic_vector(22 downto 0);
+	
+	
+	signal sl_rollover_slow_enable_1mm_int:	std_logic;
+	
+
+	component e_modulo_counter
+	generic( n: natural := 31);
+	port (	sl_clock, sl_reset_n:	in		std_logic;
+			sl_enable:				in		std_logic;
+			slv_rollover_value:		in		std_logic_vector(n-1 downto 0);
+			slv_Q:					out		std_logic_vector(n-1 downto 0);
+			sl_rollover:			out		std_logic
+	);
+	end component;
+	
+begin
+
+-- Assignments:
+
+-- Concurrent Assignments:
+	i_pos 			<= i_pos_int;
+	sl_axis_moving 	<= sl_axis_moving_int;
+	sl_in_bas_pos	<=	sl_in_bas_pos_int;
+	sl_in_wrk_pos 	<=	sl_in_wrk_pos_int;
+	
+	sl_rollover_value_1mm_int	<=	std_logic_vector(to_unsigned((1 * i_speed_s_pro_m),23));	--multiplicator reduced from normally 50000 (50000000/1000 because unit is mm and not m) to 1 for simulation purposes
+	
+-- Conditional Signal Assignments:
+	
+	sl_axis_moving_int <= '1' when ((i_speed_s_pro_m /= 0) and (((sl_cmd_to_bas_pos = '1') and (sl_in_bas_pos_int = '0')) or ((sl_cmd_to_wrk_pos = '1')  and (sl_in_wrk_pos_int = '0')))) else '0';
+	
+-- Sequential process with async. low-active reset:
+	p_move_axis: process(sl_clock, sl_reset_n)
+	begin
+		if(sl_reset_n = '0') then
+			i_pos_int <= 0;
+			sl_in_bas_pos_int <= '0';
+			sl_in_wrk_pos_int <= '0';
+		elsif(rising_edge(sl_clock)) then
+			if(sl_rollover_slow_enable_1mm_int = '1') then
+				if(sl_cmd_to_bas_pos = '1') then
+					i_pos_int <= i_pos_int-1;
+				elsif(sl_cmd_to_wrk_pos = '1') then
+					i_pos_int <= i_pos_int+1;
+				end if;
+			end if;
+			if (((i_pos_int = 0) and ((sl_rollover_slow_enable_1mm_int = '0') or (sl_cmd_to_wrk_pos = '0'))) or ((i_pos_int = 1) and (sl_rollover_slow_enable_1mm_int = '1') and (sl_cmd_to_bas_pos = '1'))) then
+				sl_in_bas_pos_int <= '1';
+			else
+				sl_in_bas_pos_int <= '0';
+			end if;	
+			if (((i_pos_int = wrk) and ((sl_rollover_slow_enable_1mm_int = '0') or (sl_cmd_to_bas_pos = '0'))) or ((i_pos_int = wrk-1) and (sl_rollover_slow_enable_1mm_int = '1') and (sl_cmd_to_wrk_pos = '1'))) then
+				sl_in_wrk_pos_int <= '1';
+			else
+				sl_in_wrk_pos_int <= '0';
+			end if;	
+		end if;
+	end process p_move_axis;
+	
+	
+	-- Component Instantiations:
+	I_my_slow_enable_1sec: e_modulo_counter	
+		generic map (	n => 23)
+		port map (	sl_clock			=>	sl_clock,
+					sl_reset_n			=>	sl_axis_moving_int,
+					sl_enable 			=>	sl_axis_moving_int,
+					slv_rollover_value 	=>	sl_rollover_value_1mm_int,		--std_logic_vector(to_unsigned(c_COUNTER_MAXVAL, n)),
+					slv_Q				=>	open,
+					sl_rollover			=>	sl_rollover_slow_enable_1mm_int
+				);
+	
+end architecture a_axis;

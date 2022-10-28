@@ -1,0 +1,321 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity e_display_and_LED_handler is
+	port ( 	slv_current_seq_state	:	in		std_logic_vector(3 downto 0);	-- current SM state
+			slv_active_options 		:	in		std_logic_vector(4 downto 0);	-- selected options from user
+			slv_saved_options 		:	in		std_logic_vector(4 downto 0);	-- saved options after acknowledge
+			slv_price				:	in		std_logic_vector(4 downto 0);	-- calculated price
+			sl_emergency_stop_n		:	in		std_logic;						-- emergency stop (low active)
+			slv_ledr				:	out 	std_logic_vector(9 downto 0);
+			slv_display_0 			: 	out 	std_logic_vector(0 to 6);
+			slv_display_1 			: 	out 	std_logic_vector(0 to 6);
+			slv_display_2 			: 	out 	std_logic_vector(0 to 6);
+			slv_display_3 			: 	out 	std_logic_vector(0 to 6);
+			slv_display_4 			: 	out 	std_logic_vector(0 to 6);
+			slv_display_5 			: 	out		std_logic_vector(0 to 6)
+		 );
+end entity e_display_and_LED_handler;
+
+architecture a_display_and_LED_handler of e_display_and_LED_handler is
+
+---- Declaration Part -----------------------------------------------
+
+	-- 14 states are implemented in state machine and these are manually encoded
+	-- 0000 = S_IDLE
+	-- 0001 = S_PRICE
+	-- 0010 = S_WASH_START
+	-- 0011 = S_WASH_AXIS_BACK
+	-- 0100 = S_RIM_CLEANING
+	-- 0101 = S_SHINE_START
+	-- 0110 = S_SHINE_AXIS_BACK
+	-- 0111 = S_WAXING_START
+	-- 1000 = S_WAXING_AXIS_BACK
+	-- 1001 = S_DRY_START
+	-- 1010 = S_DRY_AXIS_BACK
+	-- 1011 = S_POLISH_START
+	-- 1100 = S_POLISH_AXIS_BACK
+	-- 1101 = S_HOME
+	-- 1110 = S_DONE
+	
+	-- component declaration
+	component e_convert_to_7seg
+	   port (	slv_hex      : in  std_logic_vector(5 downto 0);
+				slv_display  : out std_logic_vector(0 to 6)
+			);
+	end component e_convert_to_7seg;
+	
+	-- internal signal declaration
+	signal slv_hex_input_0_int : 		std_logic_vector(5 downto 0);
+	signal slv_hex_input_1_int : 		std_logic_vector(5 downto 0);
+	signal slv_hex_input_2_int : 		std_logic_vector(5 downto 0);
+	signal slv_hex_input_3_int : 		std_logic_vector(5 downto 0);
+	signal slv_hex_input_4_int : 		std_logic_vector(5 downto 0);
+	signal slv_hex_input_5_int : 		std_logic_vector(5 downto 0);
+	
+	signal slv_price_0_int : 		std_logic_vector(5 downto 0);
+	signal slv_price_1_int : 		std_logic_vector(5 downto 0);
+	signal i_price_int : 		integer range 0 to 31;
+	
+	signal sl_price_less_ten_int:		std_logic;
+	signal sl_price_less_twenty_int:	std_logic;
+	signal sl_price_less_thirty_int:	std_logic;
+		
+	---- Declaration Part -----------------------------------------------
+
+    constant c_0 : std_logic_vector(5 downto 0) 	:= "000000";
+    constant c_1 : std_logic_vector(5 downto 0) 	:= "000001";
+    constant c_2 : std_logic_vector(5 downto 0) 	:= "000010";
+    constant c_3 : std_logic_vector(5 downto 0) 	:= "000011";
+    constant c_4 : std_logic_vector(5 downto 0) 	:= "000100";
+    constant c_5 : std_logic_vector(5 downto 0) 	:= "000101";
+    constant c_6 : std_logic_vector(5 downto 0) 	:= "000110";
+    constant c_7 : std_logic_vector(5 downto 0) 	:= "000111";
+    constant c_8 : std_logic_vector(5 downto 0) 	:= "001000";
+    constant c_9 : std_logic_vector(5 downto 0) 	:= "001001";
+    constant c_A : std_logic_vector(5 downto 0) 	:= "001010";
+    constant c_B : std_logic_vector(5 downto 0) 	:= "001011";
+    constant c_C : std_logic_vector(5 downto 0) 	:= "001100";
+    constant c_D : std_logic_vector(5 downto 0) 	:= "001101";
+    constant c_E : std_logic_vector(5 downto 0) 	:= "001110";
+    constant c_F : std_logic_vector(5 downto 0) 	:= "001111";
+    constant c_G : std_logic_vector(5 downto 0) 	:= "010000";
+    constant c_H : std_logic_vector(5 downto 0) 	:= "010001";
+    constant c_I : std_logic_vector(5 downto 0) 	:= "010010";
+    constant c_J : std_logic_vector(5 downto 0) 	:= "010011";
+    constant c_K : std_logic_vector(5 downto 0) 	:= "010100";
+    constant c_L : std_logic_vector(5 downto 0) 	:= "010101";
+    constant c_M : std_logic_vector(5 downto 0) 	:= "010110";
+    constant c_N : std_logic_vector(5 downto 0) 	:= "010111";
+    constant c_O : std_logic_vector(5 downto 0) 	:= "011000";
+    constant c_P : std_logic_vector(5 downto 0) 	:= "011001";
+    constant c_Q : std_logic_vector(5 downto 0) 	:= "011010";
+    constant c_R : std_logic_vector(5 downto 0) 	:= "011011";
+    constant c_S : std_logic_vector(5 downto 0) 	:= "011100";
+    constant c_T : std_logic_vector(5 downto 0) 	:= "011101";
+    constant c_U : std_logic_vector(5 downto 0) 	:= "011110";
+    constant c_V : std_logic_vector(5 downto 0) 	:= "011111";
+    constant c_W : std_logic_vector(5 downto 0) 	:= "100000";
+    constant c_X : std_logic_vector(5 downto 0) 	:= "100001";
+    constant c_Y : std_logic_vector(5 downto 0) 	:= "100010";
+    constant c_Z : std_logic_vector(5 downto 0) 	:= "100011";
+    constant c_comma : std_logic_vector(5 downto 0) := "100100";
+    constant c_dash : std_logic_vector(5 downto 0)  := "100101";
+    constant c_blank : std_logic_vector(5 downto 0) := "100110";
+
+begin
+
+---- Assignment Part ------------------------------------------------
+
+	i_price_int <= to_integer(unsigned(slv_price));
+	
+	p_convert_binary_price: process(i_price_int)
+	begin
+		if (i_price_int < 10) then
+			slv_price_1_int <= c_0;
+			slv_price_0_int <=	(std_logic_vector(to_unsigned((i_price_int),6)));
+		elsif (i_price_int < 20) then
+			slv_price_1_int <= c_1;
+			slv_price_0_int <=	(std_logic_vector(to_unsigned((i_price_int - 10),6)));
+		elsif (i_price_int < 30) then
+			slv_price_1_int <= c_2;
+			slv_price_0_int <=	(std_logic_vector(to_unsigned((i_price_int - 20),6)));
+		else
+			slv_price_1_int <= c_3;
+			slv_price_0_int <=	(std_logic_vector(to_unsigned((i_price_int - 30),6)));
+		end if;
+	end process p_convert_binary_price;
+	
+	p_control_peripherals: process(slv_current_seq_state, slv_price_1_int, slv_price_0_int, sl_emergency_stop_n, slv_active_options, slv_saved_options)
+	begin
+		if (sl_emergency_stop_n = '1') then
+			case(slv_current_seq_state) is
+				when "0000" =>		-- 0000 = S_IDLE
+					slv_hex_input_5_int	<=	c_S;
+					slv_hex_input_4_int	<=	c_E;
+					slv_hex_input_3_int	<=	c_L;
+					slv_hex_input_2_int	<=	c_E;
+					slv_hex_input_1_int	<=	c_C;
+					slv_hex_input_0_int	<=	c_T;
+					slv_ledr			<=	"00000" & slv_active_options;
+					
+				when "0001" =>		-- 0001 = S_PRICE
+					slv_hex_input_5_int	<=	slv_price_1_int;
+					slv_hex_input_4_int	<=	slv_price_0_int;
+					slv_hex_input_3_int	<=	c_blank;
+					slv_hex_input_2_int	<=	c_E;	
+					slv_hex_input_1_int	<=	c_U;	
+					slv_hex_input_0_int	<=	c_R;	
+					slv_ledr			<=	"00000" & slv_saved_options;
+					
+				when "0010" =>		-- 0010 = S_WASH_START
+					slv_hex_input_5_int	<=	c_W;
+					slv_hex_input_4_int	<=	c_A;
+					slv_hex_input_3_int	<=	c_S;
+					slv_hex_input_2_int	<=	c_H;
+					slv_hex_input_1_int	<=	c_blank;
+					slv_hex_input_0_int	<=	c_blank;
+					slv_ledr			<=	"1000000000";
+					
+				when "0011" =>		-- 0011 = S_WASH_AXIS_BACK
+					slv_hex_input_5_int	<=	c_W;
+					slv_hex_input_4_int	<=	c_A;
+					slv_hex_input_3_int	<=	c_S;
+					slv_hex_input_2_int	<=	c_H;
+					slv_hex_input_1_int	<=	c_blank;
+					slv_hex_input_0_int	<=	c_blank;
+					slv_ledr			<=	"1100000000";
+					
+				when "0100" =>		-- 0100 = S_RIM_CLEANING
+					slv_hex_input_5_int	<=	c_R;
+					slv_hex_input_4_int	<=	c_I;
+					slv_hex_input_3_int	<=	c_M;
+					slv_hex_input_2_int	<=	c_S;
+					slv_hex_input_1_int	<=	c_blank;
+					slv_hex_input_0_int	<=	c_blank;
+					slv_ledr			<=	"1110000000";
+					
+				when "0101" =>		-- 0101 = S_SHINE_START
+					slv_hex_input_5_int	<=	c_S;
+					slv_hex_input_4_int	<=	c_H;
+					slv_hex_input_3_int	<=	c_I;
+					slv_hex_input_2_int	<=	c_N;
+					slv_hex_input_1_int	<=	c_E;
+					slv_hex_input_0_int	<=	c_blank;
+					slv_ledr			<=	"1111000000";
+					
+				when "0110" =>		-- 0110 = S_SHINE_AXIS_BACK
+					slv_hex_input_5_int	<=	c_S;
+					slv_hex_input_4_int	<=	c_H;
+					slv_hex_input_3_int	<=	c_I;
+					slv_hex_input_2_int	<=	c_N;
+					slv_hex_input_1_int	<=	c_E;
+					slv_hex_input_0_int	<=	c_blank;
+					slv_ledr			<=	"1111000000";
+					
+				when "0111" =>		-- 0111 = S_WAXING_START
+					slv_hex_input_5_int	<=	c_W;
+					slv_hex_input_4_int	<=	c_A;
+					slv_hex_input_3_int	<=	c_X;
+					slv_hex_input_2_int	<=	c_I;
+					slv_hex_input_1_int	<=	c_N;
+					slv_hex_input_0_int	<=	c_G;
+					slv_ledr			<=	"1111100000";
+					
+				when "1000" =>		-- 1000 = S_WAXING_AXIS_BACK
+					slv_hex_input_5_int	<=	c_W;
+					slv_hex_input_4_int	<=	c_A;
+					slv_hex_input_3_int	<=	c_X;
+					slv_hex_input_2_int	<=	c_I;
+					slv_hex_input_1_int	<=	c_N;
+					slv_hex_input_0_int	<=	c_G;
+					slv_ledr			<=	"1111110000";
+					
+				when "1001" =>	    -- 1001 = S_DRY_START
+					slv_hex_input_5_int	<=	c_D;
+					slv_hex_input_4_int	<=	c_R;
+					slv_hex_input_3_int	<=	c_Y;
+					slv_hex_input_2_int	<=	c_I;
+					slv_hex_input_1_int	<=	c_N;
+					slv_hex_input_0_int	<=	c_G;
+					slv_ledr			<=	"1111111000";
+					
+				when "1010" =>		-- 1010 = S_DRY_AXIS_BACK
+					slv_hex_input_5_int	<=	c_D;
+					slv_hex_input_4_int	<=	c_R;
+					slv_hex_input_3_int	<=	c_Y;
+					slv_hex_input_2_int	<=	c_I;
+					slv_hex_input_1_int	<=	c_N;
+					slv_hex_input_0_int	<=	c_G;
+					slv_ledr			<=	"1111111000";
+					
+				when "1011" =>		-- 1011 = S_POLISH_START	
+					slv_hex_input_5_int	<=	c_P;
+					slv_hex_input_4_int	<=	c_O;
+					slv_hex_input_3_int	<=	c_L;
+					slv_hex_input_2_int	<=	c_I;
+					slv_hex_input_1_int	<=	c_S;
+					slv_hex_input_0_int	<=	c_H;
+					slv_ledr			<=	"1111111100";
+					
+				when "1100" =>		-- 1100 = S_POLISH_AXIS_BACK	
+					slv_hex_input_5_int	<=	c_P;
+					slv_hex_input_4_int	<=	c_O;
+					slv_hex_input_3_int	<=	c_L;
+					slv_hex_input_2_int	<=	c_I;
+					slv_hex_input_1_int	<=	c_S;
+					slv_hex_input_0_int	<=	c_H;
+					slv_ledr			<=	"1111111110";
+					
+				when "1101" =>		-- 1101 = S_HOME
+					slv_hex_input_5_int	<=	c_H;
+					slv_hex_input_4_int	<=	c_O;
+					slv_hex_input_3_int	<=	c_M;
+					slv_hex_input_2_int	<=	c_I;
+					slv_hex_input_1_int	<=	c_N;
+					slv_hex_input_0_int	<=	c_G;
+					slv_ledr			<=	"1010101010";
+					
+				when "1110" =>		-- 1101 = S_DONE
+					slv_hex_input_5_int	<=	c_D;
+					slv_hex_input_4_int	<=	c_O;
+					slv_hex_input_3_int	<=	c_N;
+					slv_hex_input_2_int	<=	c_E;
+					slv_hex_input_1_int	<=	c_blank;
+					slv_hex_input_0_int	<=	c_blank;
+					slv_ledr			<=	"1111111111";
+					
+				when others =>		-- undefined state
+					slv_hex_input_5_int	<=	c_blank;
+					slv_hex_input_4_int	<=	c_blank;
+					slv_hex_input_3_int	<=	c_blank;
+					slv_hex_input_2_int	<=	c_blank;
+					slv_hex_input_1_int	<=	c_blank;
+					slv_hex_input_0_int	<=	c_blank;
+					slv_ledr			<=	"0000000000";
+			end case;
+		else
+			slv_hex_input_5_int	<=	c_E;
+			slv_hex_input_4_int	<=	c_dash;
+			slv_hex_input_3_int	<=	c_S;
+			slv_hex_input_2_int	<=	c_T;
+			slv_hex_input_1_int	<=	c_O;
+			slv_hex_input_0_int	<=	c_P;
+			slv_ledr			<=	"0000000000";
+		end if;
+	end process p_control_peripherals;
+	
+	-- component instantiation
+	I_Display_0: e_convert_to_7seg
+	port map(	slv_hex      => slv_hex_input_0_int,
+				slv_display  => slv_display_0
+			);
+												
+	I_Display_1: e_convert_to_7seg 
+	port map( 	slv_hex      => slv_hex_input_1_int,
+				slv_display  => slv_display_1
+			);
+
+	I_Display_2: e_convert_to_7seg
+	port map( 	slv_hex      => slv_hex_input_2_int,
+				slv_display  => slv_display_2
+			);
+
+	I_Display_3: e_convert_to_7seg
+	port map( 	slv_hex      => slv_hex_input_3_int,
+				slv_display  => slv_display_3
+			);
+
+	I_Display_4: e_convert_to_7seg
+	port map( 	slv_hex      => slv_hex_input_4_int,
+				slv_display  => slv_display_4
+			);
+
+	I_Display_5: e_convert_to_7seg
+	port map( 	slv_hex      => slv_hex_input_5_int,
+				slv_display  => slv_display_5
+			);
+
+end architecture a_display_and_LED_handler;
+
